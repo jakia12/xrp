@@ -60,3 +60,21 @@ window.onload = () => {
 window.onresize = () => {
   setIframeHeight();
 };
+
+//falling coin animations
+<script>
+  const fallingCoins = document.querySelector('.falling-coins');
+
+  // Generate multiple coins with random properties
+  for (let i = 0; i < 30; i++) {
+    const coin = document.createElement('div');
+    coin.classList.add('coin');
+
+    // Randomize position and duration
+    coin.style.setProperty('--random-position', Math.random());
+    coin.style.setProperty('--random-duration', `${Math.random() * 3}s`);
+
+    fallingCoins.appendChild(coin);
+  }
+</script>
+
